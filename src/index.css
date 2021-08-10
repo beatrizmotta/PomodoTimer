@@ -1,8 +1,14 @@
+@font-face {
+  font-family: 'Balsamiq Sans';
+  src: url('./fonts/Balsamiq_Sans/BalsamiqSans-Regular.ttf'),
+  url('./fonts/Balsamiq_Sans/BalsamiqSans-Italic.ttf'),
+  url('./fonts/Balsamiq_Sans/BalsamiqSans-BoldItalic.ttf'),
+  url('./fonts/Balsamiq_Sans/BalsamiqSans-Bold.ttf');
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Balsamiq Sans';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
