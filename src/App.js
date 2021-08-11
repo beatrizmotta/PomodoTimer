@@ -1,9 +1,13 @@
 import logo from './logo.svg';
+import Counter from './components/templates/Counter';
 import './App.css';
+
 
 function App() {
   return (
-    <div></div>
+    <div>
+      <Counter timer={2} radius={300} />
+    </div>
   );
 }
 
