@@ -1,13 +1,15 @@
 .logo {
+    margin-top: -25px;
+}
+.logo-svg {
     color: rgb(21, 25, 48);
     font-size: 2.8rem;
     width: fit-content;
     margin-left: 40px;
-    margin-top: 30px;
 }
-.logo::before {
+.logo-svg::before {
     position: absolute;
-    top: 38px;
+    top: 7px;
     content: '.';
     z-index: -2;
     background-color: #FFE883;
@@ -16,11 +18,11 @@
     height: 40px;
     animation: beforeAnimation 1.1s ease-in-out infinite alternate;
 }
-.logo::after {
+.logo-svg::after {
     position: absolute;
     content: '.';
     z-index: -1;
-    top: 45px;
+    top: 18px;
     left: 30px;
     background-color: #FF9683;
     color: transparent;
@@ -31,12 +33,12 @@
 
 @keyframes afterAnimation {
     to {
-        top: 50px;
+        top: 15px;
     }
 }
 
 @keyframes beforeAnimation {
     to {
-        top: 35px;
+        top: 10px;
     }
 }

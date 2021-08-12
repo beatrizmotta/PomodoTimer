@@ -3,7 +3,9 @@ import './Logo.css'
 
 const Logo = () => {
     return (
-            <h1 className="logo">Pomodoro Timer</h1>
+        <div className="logo">
+            <h1 className="logo-svg">Pomodoro Timer</h1>
+        </div>
 
     );
 };
