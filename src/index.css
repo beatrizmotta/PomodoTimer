@@ -1,16 +1,14 @@
 @font-face {
-  font-family: 'Balsamiq Sans';
-  src: url('./fonts/Balsamiq_Sans/BalsamiqSans-Regular.ttf'),
-  url('./fonts/Balsamiq_Sans/BalsamiqSans-Italic.ttf'),
-  url('./fonts/Balsamiq_Sans/BalsamiqSans-BoldItalic.ttf'),
-  url('./fonts/Balsamiq_Sans/BalsamiqSans-Bold.ttf');
+  font-family: 'Nunito';
+  src: url('./fonts/Nunito/Nunito-Light.ttf');
 }
 
 body {
   margin: 0;
-  font-family: 'Balsamiq Sans';
+  font-family: 'Nunito', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #E5F2FE;
 }
 
 code {
