@@ -1,0 +1,42 @@
+.logo {
+    color: rgb(21, 25, 48);
+    font-size: 2.8rem;
+    width: fit-content;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+.logo::before {
+    position: absolute;
+    top: 38px;
+    content: '.';
+    z-index: -2;
+    background-color: #FFE883;
+    color: transparent;
+    width: 360px;
+    height: 40px;
+    animation: beforeAnimation 1.1s ease-in-out infinite alternate;
+}
+.logo::after {
+    position: absolute;
+    content: '.';
+    z-index: -1;
+    top: 45px;
+    left: 30px;
+    background-color: #FF9683;
+    color: transparent;
+    width: 365px;
+    height: 45px;
+    animation: afterAnimation 1.1s ease-in-out infinite alternate;
+}
+
+@keyframes afterAnimation {
+    to {
+        top: 50px;
+    }
+}
+
+@keyframes beforeAnimation {
+    to {
+        top: 35px;
+    }
+}
