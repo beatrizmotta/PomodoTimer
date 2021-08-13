@@ -1,4 +1,5 @@
 import React from 'react'
+import './Timer.css'
 
 function toggle(element) {
     if (element == true) {
@@ -13,12 +14,17 @@ class Timer extends React.Component {
         super(props)
         this.state = {
             isStarted: '',
+            stop: '',
             date: ''
         }
         this.handleClick = this.handleClick.bind(this)
         this.restart = this.restart.bind(this)
     }
     componentDidMount() {
+        this.setState({isStarted: false})
+        this.setState({date: this.props.timer/6})
+    }
+    componentWillUnmount() {
         this.setState({isStarted: false})
     }
     handleClick() {
@@ -29,9 +35,10 @@ class Timer extends React.Component {
     }
     render() {
         return (
-            <div>
+            <div className="timer">
                 <svg width={this.props.radius * 2} height={this.props.radius * 2} viewBox={`0 0 760 760`} fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="circle" filter="url(#filter0_i)">
+                    <text x="40%" y="-49%" className="text">{this.props.timer/60}</text>
                         <circle onAnimationEnd={this.restart} className={`${this.state.isStarted == true ? 'animated' : 'beforeStart'}`} style={{ animationDuration: `${this.props.timer}s` }} cx="379.5" cy="379.5" r={this.props.radius} stroke={this.props.color || "#82BAED"} stroke-width={this.props.radius / 8} />
                     </g>
                     <defs>
