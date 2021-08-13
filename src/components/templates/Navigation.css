@@ -1,0 +1,25 @@
+.navegacao {
+    display: flex;
+    align-items: center;
+}
+.link {
+    background-color: #82BAED;
+    font-weight: bold;
+    text-align: center;
+    width: fit-content;
+    padding: 10px 10px;
+    margin-right: 30px;
+    margin-top: -5px;
+    box-shadow: 6px 6px 0px #3B85C7;
+    
+    user-select: none;
+    cursor: pointer;
+}
+.link:nth-of-type(even) {
+    background-color: #FF9581;
+    box-shadow: 6px 6px 0px #FF5B3D;
+}
+.link:nth-last-of-type(1) {
+    background-color: #FFCC83;
+    box-shadow: 6px 6px 0px #ff8b3d;
+}

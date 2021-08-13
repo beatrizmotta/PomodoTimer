@@ -5,12 +5,12 @@
 
 body {
   margin: 0;
+  width: 100vw;
+  height: 98vh;
+  overflow-x: hidden;
   font-family: 'Nunito', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   background-color: #E5F2FE;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
