@@ -2,12 +2,12 @@ svg {
     transform: rotate(270deg);
 }
 .beforestart{
-    stroke-dasharray: 2000;
+    stroke-dasharray: 1995;
     stroke-dashoffset: 0;
 }
 .animated{
-    stroke-dasharray: 2000;
-    stroke-dashoffset: 2000;
+    stroke-dasharray: 1995;
+    stroke-dashoffset: 1995;
     animation: counter 5s 1 forwards;
 }
 .counter {

@@ -2,6 +2,12 @@
     display: flex;
     align-items: center;
 }
+a {
+    text-decoration: none;
+}
+a:visited {
+    color: inherit;
+}
 .link {
     background-color: #82BAED;
     font-weight: bold;

@@ -9,3 +9,21 @@
     transform: rotate(90deg);
     fill: black;
 }
+.circleTimer {
+    stroke-dasharray: 1947px;
+}
+svg.stable {
+    stroke-dashoffset: 0px;
+}
+svg.animated {
+    stroke-dashoffset: 1951px;
+    animation: startTimer 10s ease 1 forwards;
+}
+
+@keyframes startTimer {
+    from {
+        stroke-dashoffset: 1951px;
+    } to {
+        stroke-dashoffset: 0px;
+    }
+}

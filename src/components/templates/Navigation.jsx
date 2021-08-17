@@ -1,26 +1,17 @@
 import React from 'react';
-import Button from './Button';
 import './Navigation.css'
+import {useContext} from 'react'
+import { PageContext } from '../../contexts/PageContext';
 
-const initialPage = 'pomodoro'
-
-class Navigation extends React.Component {
-    constructor(props) {
-        super(props)
-        this.getCurrentPage = this.getCurrentPage.bind(this)
-    }
-    getCurrentPage(e) {
-        this.props.onEvent(e)
-    }
-    render() {
+function Navigation() {
+        const {setPage} = useContext(PageContext)
         return (
                 <div className="navegacao">
-                    <Button onEvent={this.getCurrentPage} timer={'pomodoro'}>Pomodoro</Button>
-                    <Button onEvent={this.getCurrentPage} timer={'shortrest'} >Pausa Rápida</Button>
-                    <Button onEvent={this.getCurrentPage} timer={'longrest'} >Pausa Longa</Button>
+                    <a href="/" className='link' onClick={(e) => {setPage('pomodoro'); e.preventDefault()}}>Pomodoro</a>
+                    <a href="/" className='link' onClick={(e) => {setPage('shortrest'); e.preventDefault()}}>Pausa Rápida</a>
+                    <a href="/" className='link' onClick={(e) => {setPage('longrest'); e.preventDefault()}}>Pausa Longa</a>
                 </div>
         );
     }
-}
 
 export default Navigation;
