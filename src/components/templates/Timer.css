@@ -2,27 +2,31 @@
     display: flex;
     align-items: center;
 }
-.text {
+.temporizador {
     font-weight: normal;
     font-size: 60px;
-    font-family: inherit;
-    transform: rotate(90deg);
-    fill: black;
+    position: absolute;
+    left: 280px;
+    top: 310px;
 }
 .circleTimer {
     stroke-dasharray: 1947px;
+    position: absolute;
 }
 svg.stable {
     stroke-dashoffset: 0px;
 }
 svg.animated {
-    stroke-dashoffset: 1951px;
+    stroke-dashoffset: 1947px;
     animation: startTimer 10s ease 1 forwards;
+}
+svg.paused {
+    animation-play-state: paused;
 }
 
 @keyframes startTimer {
     from {
-        stroke-dashoffset: 1951px;
+        stroke-dashoffset: 1947px;
     } to {
         stroke-dashoffset: 0px;
     }
