@@ -1,31 +1,38 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import './Timer.css'
+import {AnimationContext} from '../../contexts/AnimationContext'
 import TimerSvg from './svgs/TimerSvg'
-import { TimerContext } from '../../contexts/TimerContext';
+import TextTimer from './TextTimer'
 
 function Timer(props) {
 
+    const [animationHasStarted, setHasStarted] = useState(false)
+    const [animationHasPaused, setHasPaused] = useState(false)
 
-    const [animationState, setAnimationState] = useState('stable')
-    const [timer, setTimer] = useState(props.timer)
 
-    function toggleAnimation() {
-        setAnimationState(animationState === 'stable' ? 'animated' : 'stable')
+    function toggleStartOrEndAnimation() {
+        animationHasStarted === true ? setHasStarted(false) : setHasStarted(true)
     }
 
-    return (
-        <TimerContext.Provider value={{animationState, setAnimationState}}>
-            <div className="timer">
-                <h1 className="temporizador">
-                    {timer}
-                </h1>
-                <TimerSvg {...props} timer={props.timer}/>
-                <button onClick={() => {toggleAnimation(); if(animationState === 'stable') {
-                    setInterval(() => {setTimer(timer - 1)}, 1000)
-                }}}>Iniciar</button>
-            </div>    
-        </TimerContext.Provider>
-    );
+    function togglePauseAnimation() {
+        animationHasPaused === true ? setHasPaused(false) : setHasPaused(true)
+    }
+
+
+    return(
+        <AnimationContext.Provider value={{startContext: [animationHasStarted, setHasStarted], pauseContext: [animationHasPaused, setHasPaused]}}>
+
+        <div>
+            <TimerSvg {...props}>
+                <TextTimer tempo={props.timer} />
+            </TimerSvg>
+            {/* <button onClick={() => {toggleStartOrEndAnimation()}}>{animationHasStarted ? 'iniciada' : 'não iniciada'}</button>
+            <button onClick={() => {togglePauseAnimation()}}>{animationHasPaused ? 'voltar' : 'pausar'}</button> */}
+            <i>Se a animação foi settada pra começar mostra true, se não mostra falso.</i>
+        </div>
+        
+        </AnimationContext.Provider>
+    )
 }
 
 export default Timer;

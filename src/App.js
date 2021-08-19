@@ -6,10 +6,12 @@ import React, { useState } from 'react';
 import { PageContext } from './contexts/PageContext';
 
 function App() {
+  /* Passando a página inicial como a "Pomodoro" (timer de 25 minutos) */
   const [page, setPage] = useState('pomodoro')
     return (
       <div className="main">
         <Logo />
+        {/* Settando o PageContext Provider, que vai possibilitar ao usuário mudar entre páginas  */}
         <PageContext.Provider value={{page, setPage}}>
           <Navigation />
           <div className="content">

@@ -1,27 +1,25 @@
 import React, { useState, useContext } from 'react';
-import { TimerContext } from '../../../contexts/TimerContext';
-import TextTimer from '../TextTimer';
+import {AnimationContext} from '../../../contexts/AnimationContext'
 
 function TimerSvg(props) {
-    const {animationState} = useContext(TimerContext)
-    const {setAnimationState} = useContext(TimerContext)
+    const {startContext, pauseContext} = useContext(AnimationContext)
+    const [animationHasStarted] = startContext
+    const [animationHasPaused] = pauseContext
 
-    const [isPaused, setPlayState] = useState(false)
-    function togglePlayPause() {
-        setPlayState(isPaused ? false : true)
-    }
     return (
-        <>
-        <svg className={`${animationState} ${isPaused ? 'paused' : ''}`} onAnimationEnd={() => {alert('Acabou'); setAnimationState('stable')}} style={{ animationDuration: `${props.timer}s` }} width={props.radius * 2} height={props.radius * 2} viewBox={`0 0 760 760`} fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div className="timer">
+        {props.children}
+        <svg 
+            style={{ animationDuration: `${props.timer}s` }} 
+            className={
+                `${animationHasStarted ? 'oncurse' : 'stationary'}
+                 ${animationHasPaused ? 'paused' : 'continued'}
+                `
+            }
+            width={props.radius * 2} height={props.radius * 2} 
+            viewBox={`0 0 760 760`} fill="none" xmlns="http://www.w3.org/2000/svg"
+            >
                 <g id="circle" filter="url(#filter0_i)">
-
-
-                    <text x="40%" y="-49%" className="text">
-
-                    </text>
-                    
-                    
-                    
                     <circle className="circleTimer" cx="379.5" cy="379.5" r={props.radius} stroke={props.color || "#82BAED"} stroke-width={props.radius / 8} />
                 </g>
                 <defs>
@@ -37,8 +35,7 @@ function TimerSvg(props) {
                     </filter>
                 </defs>
             </svg>
-            <button onClick={() => {togglePlayPause()}}>Pausar</button>
-        </>
+        </div>
     );
 }
 

@@ -1,6 +1,14 @@
 .timer {
     display: flex;
     align-items: center;
+    width: fit-content;
+}
+.timer h1 {
+    position: absolute;
+    top: 340px;
+    left: 300px;
+    font-weight: lighter;
+    font-size: 3em;
 }
 .temporizador {
     font-weight: normal;
@@ -13,15 +21,18 @@
     stroke-dasharray: 1947px;
     position: absolute;
 }
-svg.stable {
+svg.stationary {
     stroke-dashoffset: 0px;
 }
-svg.animated {
+svg.oncurse {
     stroke-dashoffset: 1947px;
     animation: startTimer 10s ease 1 forwards;
 }
 svg.paused {
     animation-play-state: paused;
+}
+svg.continued {
+    animation-play-state: running;
 }
 
 @keyframes startTimer {
