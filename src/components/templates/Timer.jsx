@@ -7,7 +7,8 @@ import TextTimer from './TextTimer'
 function Timer(props) {
 
     const [animationHasStarted, setHasStarted] = useState(false)
-    const [animationHasPaused, setHasPaused] = useState(false)
+    const [animationHasPaused, setHasPaused] = useState(true)
+    const [isRunning, setIsRunning] = useState(false)
 
 
     function toggleStartOrEndAnimation() {
@@ -20,15 +21,12 @@ function Timer(props) {
 
 
     return(
-        <AnimationContext.Provider value={{startContext: [animationHasStarted, setHasStarted], pauseContext: [animationHasPaused, setHasPaused]}}>
+        <AnimationContext.Provider value={{startContext: [animationHasStarted, setHasStarted], pauseContext: [animationHasPaused, setHasPaused], runningContext: [isRunning, setIsRunning]}}>
 
-        <div>
+        <div {...props}>
             <TimerSvg {...props}>
                 <TextTimer tempo={props.timer} />
             </TimerSvg>
-            {/* <button onClick={() => {toggleStartOrEndAnimation()}}>{animationHasStarted ? 'iniciada' : 'não iniciada'}</button>
-            <button onClick={() => {togglePauseAnimation()}}>{animationHasPaused ? 'voltar' : 'pausar'}</button> */}
-            <i>Se a animação foi settada pra começar mostra true, se não mostra falso.</i>
         </div>
         
         </AnimationContext.Provider>

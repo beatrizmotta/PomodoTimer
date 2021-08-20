@@ -1,0 +1,101 @@
+.todo p {
+    color: var(--letter_dark);
+    padding: 0px 0px;
+    margin: 0;
+    display: inline-block;
+    
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.todo .title {
+    background-color: lightblue;
+    padding: 5px 10px;
+    border-radius: 10px 10px 0px 0px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.todo .title.minimized {
+    border-radius: 10px;
+}
+.todo {
+    display: flex;
+    flex-direction: column;
+    width: 475px;
+    margin-left: 120px;
+    height: fit-content;
+}
+.task, .todo input{
+    background-color: rgb(255, 246, 218);
+    max-height: 50px;
+    border-top: 1px rgb(68, 139, 160) solid;
+    display: flex;
+    justify-content: flex-start;
+}
+.todo input {
+    font-size: 1rem;
+    outline: none;
+    width: 90%;
+    border: 0;
+}
+
+.task {
+    padding: 15px 10px;
+    border-radius: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.task p {
+    padding: 0;
+}
+
+.task img {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+}
+
+.task img .notdone {
+    animation-play-state: paused;
+}
+.taskinput {
+    border-radius: 0px 0px 10px 10px;
+}
+.clearTasks {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+}
+.clearTasks img {
+    width: 23px;
+    cursor: pointer;
+}
+.checkmark {
+    cursor: pointer;
+    width: 21px;
+    height: 21px;
+    background-color: rgb(255, 246, 218);
+    border-radius: 100%;
+    margin-right: 2px;
+    border: 2px solid var(--letter_dark);
+    
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkmark img {
+    width: 17px;
+    height: 17px;
+    padding: 3px 3px;
+}
+img.done {
+    background-color: var(--letter_dark);
+}
+.outlined {
+    text-decoration: line-through var(--letter_dark);
+}

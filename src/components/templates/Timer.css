@@ -5,10 +5,26 @@
 }
 .timer h1 {
     position: absolute;
-    top: 340px;
-    left: 300px;
     font-weight: lighter;
+    top: 340px;
+    left: 291px;
     font-size: 3em;
+}
+.timer.shortrest h1 {
+    left: 320px;
+}
+
+.timer.longrest h1, .timer.pomodoro h1 {
+    left: 300px;
+}
+
+.timercontainer {
+    width: fit-content;
+    display: flex;
+    
+}
+.timercontainer button {
+    float: right;
 }
 .temporizador {
     font-weight: normal;

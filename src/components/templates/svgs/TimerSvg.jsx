@@ -2,18 +2,17 @@ import React, { useState, useContext } from 'react';
 import {AnimationContext} from '../../../contexts/AnimationContext'
 
 function TimerSvg(props) {
-    const {startContext, pauseContext} = useContext(AnimationContext)
+    const {startContext, pauseContext, runningContext} = useContext(AnimationContext)
     const [animationHasStarted] = startContext
     const [animationHasPaused] = pauseContext
 
     return (
-        <div className="timer">
-        {props.children}
+        <div className="timercontainer">
         <svg 
             style={{ animationDuration: `${props.timer}s` }} 
             className={
                 `${animationHasStarted ? 'oncurse' : 'stationary'}
-                 ${animationHasPaused ? 'paused' : 'continued'}
+                ${animationHasPaused ? 'paused' : 'continued'}
                 `
             }
             width={props.radius * 2} height={props.radius * 2} 
@@ -35,6 +34,7 @@ function TimerSvg(props) {
                     </filter>
                 </defs>
             </svg>
+            {props.children}
         </div>
     );
 }
