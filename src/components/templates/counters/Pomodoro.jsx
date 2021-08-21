@@ -11,7 +11,7 @@ function Pomodoro(props) {
          * fault) e o raio da circunferência.
          * 
         */
-        <Timer className="timer pomodoro" timer={1500} radius={310} />
+        <Timer className="timer pomodoro" name="pomodoro" timer={1500} radius={310} />
     );
 }
 

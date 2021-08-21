@@ -4,7 +4,8 @@ import {useContext} from 'react'
 import { PageContext } from '../../contexts/PageContext';
 
 function Navigation() {
-        const {setPage} = useContext(PageContext)
+        const {page, setPage} = useContext(PageContext)
+
         return (
             /* Ao clique em qualquer um dos links, o setPage do PageContext que provemos em App.js vai permitir que o link
             sette qual é a página desejada.*/

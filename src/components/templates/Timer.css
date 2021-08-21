@@ -11,11 +11,11 @@
     font-size: 3em;
 }
 .timer.shortrest h1 {
-    left: 320px;
+    left: 395px;
 }
 
 .timer.longrest h1, .timer.pomodoro h1 {
-    left: 300px;
+    left: 380px;
 }
 
 .timercontainer {
@@ -34,7 +34,7 @@
     top: 310px;
 }
 .circleTimer {
-    stroke-dasharray: 1947px;
+    stroke-dasharray: 1948px;
     position: absolute;
 }
 svg.stationary {
@@ -51,9 +51,33 @@ svg.continued {
     animation-play-state: running;
 }
 
+button img {
+    width: 30px;
+    height: 30px;
+    filter: invert(10%);
+}
+button {
+    background-color: lightblue;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 10px;
+    border-radius: 5px;
+    box-shadow: 5px 2px 15px 3px rgba(0, 0, 0, 0.089);
+
+    cursor: pointer;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    height: 105px;
+    justify-content: space-between;
+}
 @keyframes startTimer {
     from {
-        stroke-dashoffset: 1947px;
+        stroke-dashoffset: 1948px;
     } to {
         stroke-dashoffset: 0px;
     }

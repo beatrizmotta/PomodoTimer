@@ -16,8 +16,16 @@
   border-radius: 10px;
 
   display: flex;
-  justify-content: right;
+  justify-content: center;
   align-items: center;
+
+  box-shadow: 5px 2px 15px 8px rgba(0, 0, 0, 0.089);
+}
+footer p {
+  font-size: 0.8em;;
+}
+footer {
+  margin: auto;
 }
 .hidden {
   display: none;

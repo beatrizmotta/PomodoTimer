@@ -1,22 +1,22 @@
-import React, { useState, useContext } from 'react';
-import {AnimationContext} from '../../../contexts/AnimationContext'
+import React, { useContext } from 'react';
+import { AnimationContext } from '../../../contexts/AnimationContext'
 
 function TimerSvg(props) {
-    const {startContext, pauseContext, runningContext} = useContext(AnimationContext)
+    const { startContext, pauseContext, runningContext } = useContext(AnimationContext)
     const [animationHasStarted] = startContext
     const [animationHasPaused] = pauseContext
 
     return (
         <div className="timercontainer">
-        <svg 
-            style={{ animationDuration: `${props.timer}s` }} 
-            className={
-                `${animationHasStarted ? 'oncurse' : 'stationary'}
+            <svg
+                style={{ animationDuration: `${props.timer}s` }}
+                className={
+                    `${animationHasStarted ? 'oncurse' : 'stationary'}
                 ${animationHasPaused ? 'paused' : 'continued'}
-                `
-            }
-            width={props.radius * 2} height={props.radius * 2} 
-            viewBox={`0 0 760 760`} fill="none" xmlns="http://www.w3.org/2000/svg"
+                    `
+                }
+                width={props.radius * 2} height={props.radius * 2}
+                viewBox={`0 0 760 760`} fill="none" xmlns="http://www.w3.org/2000/svg"
             >
                 <g id="circle" filter="url(#filter0_i)">
                     <circle className="circleTimer" cx="379.5" cy="379.5" r={props.radius} stroke={props.color || "#82BAED"} stroke-width={props.radius / 8} />

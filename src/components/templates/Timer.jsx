@@ -25,7 +25,7 @@ function Timer(props) {
 
         <div {...props}>
             <TimerSvg {...props}>
-                <TextTimer tempo={props.timer} />
+                <TextTimer {...props} tempo={props.timer} color={props.color || "#82BAED"}/>
             </TimerSvg>
         </div>
         

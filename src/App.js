@@ -17,12 +17,16 @@ function App() {
                 <Navigation />
                 <div className="content">
                     <Counter />
-                    <div className="todo">
-                        <Todo />
+                    <div className="todo_container">
+                        <div className="todo">
+                            <Todo />
+                        </div>
                     </div>
                 </div>
             </PageContext.Provider>
-
+            <footer>
+                <p>Made by <a target="_blank" href="https://beatrizmotta.github.io/">Beatriz Motta</a>. Icons by <a target="_blank" href="https://icons8.con">Icons8</a>.</p>
+            </footer>
         </div>
     );
 }
