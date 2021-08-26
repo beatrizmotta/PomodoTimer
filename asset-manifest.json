@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/PomodoTimer/static/css/main.6fc723ba.chunk.css",
-    "main.js": "/PomodoTimer/static/js/main.967f7d36.chunk.js",
-    "main.js.map": "/PomodoTimer/static/js/main.967f7d36.chunk.js.map",
+    "main.css": "/PomodoTimer/static/css/main.8b496711.chunk.css",
+    "main.js": "/PomodoTimer/static/js/main.a09e56dc.chunk.js",
+    "main.js.map": "/PomodoTimer/static/js/main.a09e56dc.chunk.js.map",
     "runtime-main.js": "/PomodoTimer/static/js/runtime-main.6ca485a1.js",
     "runtime-main.js.map": "/PomodoTimer/static/js/runtime-main.6ca485a1.js.map",
     "static/js/2.39f5566f.chunk.js": "/PomodoTimer/static/js/2.39f5566f.chunk.js",
@@ -10,14 +10,15 @@
     "static/js/3.de3da4a0.chunk.js": "/PomodoTimer/static/js/3.de3da4a0.chunk.js",
     "static/js/3.de3da4a0.chunk.js.map": "/PomodoTimer/static/js/3.de3da4a0.chunk.js.map",
     "index.html": "/PomodoTimer/index.html",
-    "static/css/main.6fc723ba.chunk.css.map": "/PomodoTimer/static/css/main.6fc723ba.chunk.css.map",
+    "static/css/main.8b496711.chunk.css.map": "/PomodoTimer/static/css/main.8b496711.chunk.css.map",
     "static/js/2.39f5566f.chunk.js.LICENSE.txt": "/PomodoTimer/static/js/2.39f5566f.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/PomodoTimer/static/media/Nunito-Light.abdadce6.ttf"
+    "static/media/index.css": "/PomodoTimer/static/media/Nunito-Light.abdadce6.ttf",
+    "static/media/mixkit-guitar-notification-alert-2320.81f8c8d5.wav": "/PomodoTimer/static/media/mixkit-guitar-notification-alert-2320.81f8c8d5.wav"
   },
   "entrypoints": [
     "static/js/runtime-main.6ca485a1.js",
     "static/js/2.39f5566f.chunk.js",
-    "static/css/main.6fc723ba.chunk.css",
-    "static/js/main.967f7d36.chunk.js"
+    "static/css/main.8b496711.chunk.css",
+    "static/js/main.a09e56dc.chunk.js"
   ]
 }
