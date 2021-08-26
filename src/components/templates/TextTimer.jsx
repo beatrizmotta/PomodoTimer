@@ -1,21 +1,23 @@
 import React, { useState, useContext, useEffect } from 'react'
 import { AnimationContext } from '../../contexts/AnimationContext'
-import {PageContext} from '../../contexts/PageContext'
+import { PageContext } from '../../contexts/PageContext'
+import sound from '../../assets/sounds/mixkit-guitar-notification-alert-2320.wav'
 import play from '../../assets/gifs/icons8-play-30.png'
 import pause from '../../assets/gifs/icons8-pause-60.png'
 import reset from '../../assets/gifs/icons8-reset-48.png'
 
 function TextTimer(props) {
 
-    const { startContext, pauseContext, runningContext} = useContext(AnimationContext)
+    const { startContext, pauseContext, runningContext } = useContext(AnimationContext)
     const [animationHasStarted, setHasStarted] = startContext
     const [animationHasPaused, setHasPaused] = pauseContext
     const [isRunning, setIsRunning] = runningContext
 
-    const {setPage} = useContext(PageContext)
+    const { setPage } = useContext(PageContext)
 
     let alert
     let nextpage
+    const ordem = ['pomodoro', 'shorterest', 'pomodoro', 'longrest']
     switch (props.name) {
         case 'shortrest':
             alert = 'Sua pausa de 5 minutos acabou! Vamos voltar ao trabalho?'
@@ -37,6 +39,11 @@ function TextTimer(props) {
     const [timer, setTimer] = useState(tempoInicialEmMinutos)
     const [intervalId, setIntervalId] = useState(false)
 
+    function playSound(url) {
+        const audio = new Audio(url)
+        audio.play()
+    }
+
     useEffect(() => {
         if (isRunning) {
             const id = window.setInterval(() => {
@@ -49,12 +56,14 @@ function TextTimer(props) {
     }, [isRunning])
 
     function treat(time) {
-        const minutes = Math.floor(time / 60)
+        let minutes = Math.floor(time / 60)
         let seconds = time % 60
         seconds = seconds < 10 ? '0' + seconds : seconds
+        minutes = minutes < 10 ? '0' + minutes : minutes
         let clock = `${minutes}:${seconds}`
         if (time == 0) {
             resetTimer()
+            playSound(sound)
             window.alert(alert)
             setPage(nextpage)
         } else {
@@ -80,22 +89,24 @@ function TextTimer(props) {
     }
 
     return (
-        <div className="timer">
+        <>
             <h1>
                 {treat(timer)}
             </h1>
-            <div className="controls">
-            <button style={{backgroundColor: props.color}} onClick={() => handlePlay()}>
-                <img src={play} alt="" />
-            </button>
-            <button style={{backgroundColor: props.color, filter: 'hue-rotate(50)'}} onClick={() => handlePause()}>
-                <img src={pause} alt="" />
-            </button>
-            <button style={{backgroundColor: props.color}} onClick={() => resetTimer()}>
-                <img src={reset} style={{width: 25, height: 25}} alt="" />
-            </button>
+            <div className="timer">
+                <div className="controls">
+                    <button style={{ backgroundColor: props.color }} onClick={() => handlePlay()}>
+                        <img src={play} alt="" />
+                    </button>
+                    <button style={{ backgroundColor: props.color, filter: 'hue-rotate(50)' }} onClick={() => handlePause()}>
+                        <img src={pause} alt="" />
+                    </button>
+                    <button style={{ backgroundColor: props.color }} onClick={() => resetTimer()}>
+                        <img src={reset} style={{ width: 25, height: 25 }} alt="" />
+                    </button>
+                </div>
             </div>
-        </div>
+        </>
     )
 }
 

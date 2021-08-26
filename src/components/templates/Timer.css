@@ -6,16 +6,13 @@
 .timer h1 {
     position: absolute;
     font-weight: lighter;
-    top: 340px;
+    top: 350px;
     left: 291px;
     font-size: 3em;
 }
-.timer.shortrest h1 {
-    left: 395px;
-}
-
-.timer.longrest h1, .timer.pomodoro h1 {
-    left: 380px;
+.timer h1  {
+    top: calc(50% - 35px);
+    left: calc(30% - 75px);
 }
 
 .timercontainer {

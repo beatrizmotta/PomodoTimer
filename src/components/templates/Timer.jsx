@@ -11,15 +11,6 @@ function Timer(props) {
     const [isRunning, setIsRunning] = useState(false)
 
 
-    function toggleStartOrEndAnimation() {
-        animationHasStarted === true ? setHasStarted(false) : setHasStarted(true)
-    }
-
-    function togglePauseAnimation() {
-        animationHasPaused === true ? setHasPaused(false) : setHasPaused(true)
-    }
-
-
     return(
         <AnimationContext.Provider value={{startContext: [animationHasStarted, setHasStarted], pauseContext: [animationHasPaused, setHasPaused], runningContext: [isRunning, setIsRunning]}}>
 
