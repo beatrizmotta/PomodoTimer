@@ -12,4 +12,3 @@ Timer de produtividade desenvolvido com React.JS.
 *[Cheque o app aqui](https://beatrizmotta.github.io/PomodoTimer/)*
 =======
 *[Cheque o app aqui](https://beatrizmotta.github.io/PomodoTimer/)*
->>>>>>> a7afa527b4340c987df84921bd369f703ac49738
