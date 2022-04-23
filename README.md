@@ -8,4 +8,8 @@ Timer de produtividade desenvolvido com React.JS.
 - [ ] Ser notificado pelo browser quando o cronômetro chegar ao fim;
 - [ ] Cronômetro para: tarefas, pausas rápidas e pausas longas.
 
+<<<<<<< HEAD
 *[Cheque o app aqui](https://beatrizmotta.github.io/PomodoTimer/)*
+=======
+*[Cheque o app aqui](https://beatrizmotta.github.io/PomodoTimer/)*
+>>>>>>> a7afa527b4340c987df84921bd369f703ac49738
