@@ -63,8 +63,17 @@ function TextTimer(props) {
         let clock = `${minutes}:${seconds}`
         if (time == 0) {
             resetTimer()
-            playSound(sound)
-            window.alert(alert)
+
+            if (window.Notification.permission === 'granted') {
+                let n = new Notification('Timer', {
+                    body: `${alert}`
+                })
+                n.onclick = () => {this.close()}
+            } else {
+                playSound(sound)
+                window.alert(alert)
+            }
+
             setPage(nextpage)
         } else {
             return clock

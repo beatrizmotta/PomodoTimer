@@ -8,6 +8,8 @@ import { PageContext } from './contexts/PageContext';
 
 function App() {
     /* Passando a página inicial como a "Pomodoro" (timer de 25 minutos) */
+    window.Notification.requestPermission(); 
+
     const [page, setPage] = useState('pomodoro')
     return (
         <div className="main">
