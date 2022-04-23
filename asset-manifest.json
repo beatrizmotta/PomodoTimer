@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/PomodoTimer/static/css/main.ba45ff4d.chunk.css",
-    "main.js": "/PomodoTimer/static/js/main.a09e56dc.chunk.js",
-    "main.js.map": "/PomodoTimer/static/js/main.a09e56dc.chunk.js.map",
+    "main.js": "/PomodoTimer/static/js/main.82fe6788.chunk.js",
+    "main.js.map": "/PomodoTimer/static/js/main.82fe6788.chunk.js.map",
     "runtime-main.js": "/PomodoTimer/static/js/runtime-main.6ca485a1.js",
     "runtime-main.js.map": "/PomodoTimer/static/js/runtime-main.6ca485a1.js.map",
     "static/js/2.39f5566f.chunk.js": "/PomodoTimer/static/js/2.39f5566f.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.6ca485a1.js",
     "static/js/2.39f5566f.chunk.js",
     "static/css/main.ba45ff4d.chunk.css",
-    "static/js/main.a09e56dc.chunk.js"
+    "static/js/main.82fe6788.chunk.js"
   ]
 }
